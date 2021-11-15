@@ -1,0 +1,150 @@
+header {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    padding-top: 5vh;   
+
+    .logo {
+        display: flex;
+        vertical-align: middle;
+        text-align: center;  
+        h1 {
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;              
+        width: 140px;
+        line-height: 60px;
+        border-radius: calc(200px / 4);
+        &:hover {
+            background-color: blue;
+            color: white;
+            }    
+        }
+    }
+
+    .nav-container-mobile {
+        padding-top: 5vh;
+        background-color: white;
+        height: 100vh;
+        width: 50%;
+        display: flex;
+        flex-direction: column;    
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(-100%);  
+    
+        .nav-links-mobile  {
+            text-align: center;
+            li {
+            padding: 10px 0;
+            margin: 20px 0;
+            cursor: pointer;
+            width: 100px;   
+            border-radius: calc(100px / 4);
+            transition: 0.5s;
+                &:hover {
+                    background-color: blue;
+                    color: white;
+                }    
+            }      
+        }   
+    }
+
+    .burger {
+        cursor: pointer;
+        padding: 1.5px;
+        transition: 0.5s;
+        
+        &:hover {
+            background-color: gray;
+            .bar {
+                background-color: white;
+            }           
+        }
+
+        .bar {   
+            margin: 5px;
+            height: 5px;
+            width: 40px;
+            background-color: black;            
+        }
+    }
+}
+
+  @keyframes menu-open {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
+  
+  .open {
+    animation-name: menu-open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;    
+  }
+
+  @keyframes menu-close {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+  }
+  
+  .close {
+    animation-name: menu-close;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media screen and (max-width: 799px) {
+    .nav-container-desktop {
+        display: none;
+    }       
+  }
+
+  @media screen and (min-width: 800px) {
+   .burger {
+       display: none;
+   }      
+   header {
+    padding: 0; 
+    position: sticky;   
+    top: 0;
+    background-color: #fff;     
+   } 
+
+   .nav-links-desktop {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    li {
+        font-size: 20px;
+        padding: 10px 0;
+        margin: 20px 0;
+        cursor: pointer;
+        width: 100px;   
+        border-radius: calc(100px / 4);
+        transition: 0.5s;
+            &:hover {
+                background-color: blue;
+                color: white;
+            }    
+        }      
+    }
+  }
+
+

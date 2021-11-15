@@ -1,0 +1,115 @@
+.home-container { 
+    //width of header is offset
+    height: 90vh;    
+}
+
+.greetings {
+    padding-top: 5vh;  
+
+    h2 {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.5;
+        .name {
+            color: blue;
+        }
+    } 
+}
+
+.dev-container {
+    text-align: center;
+    padding-top: 25px;    
+
+    .dev-img {
+        height: 30vh;
+        width: 30vh;
+    }
+}
+
+.btn-lm-container {
+    text-align: center;
+    padding-top: 2.5vh; 
+
+    .btn-lm {
+        width: 150px;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: 3px solid blue;
+        font-size: 16px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: calc(150px / 4);
+        &:hover {
+            background-color: blue;            
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .home-container {
+        height: 90vh;
+    }
+    .greetings {
+        padding-top: 10vh;
+    }
+    .dev-container {
+        padding-top: 7.5vh;
+    }
+    .btn-lm-container {
+        padding-top: 7.5vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home-container {
+        height: 100vh;
+    }
+    .greetings {
+        padding-top: 10vh;
+    }
+    .dev-container {
+        padding-top: 10vh;
+    }
+    .btn-lm-container {
+        padding-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home-container { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;        
+    }
+    
+    .greetings {        
+        padding: 0;
+        align-self: flex-end;        
+        grid-column-start: 1;
+        grid-row-start: 2;        
+        h2 {            
+            text-align: left;           
+        }
+     }
+    .btn-lm-container {  
+        padding: 0;      
+        align-self: flex-start;
+        text-align: left;        
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .dev-container {
+        align-self: flex-start;
+        padding: 0;              
+        grid-column-start: 2;
+        grid-row: 2 / 5;
+    }
+    
+}
+    
+
+

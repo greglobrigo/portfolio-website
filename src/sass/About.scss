@@ -1,0 +1,92 @@
+.about-container {     
+    height: 100vh;
+}
+
+.about h2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+.about-img-container {
+    text-align: center;  
+
+    .bpo-img {
+        height: 30vh;
+        width: 30vh;
+    }
+}
+
+.about-desc {
+    margin: 0 25px;
+    text-align: justify;
+    p {        
+        line-height: 1.5;
+    }
+}
+
+.btn-res-container {    
+    text-align: center;
+    padding-top: 2.5vh; 
+
+    .btn-res {
+        width: 150px;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: 3px solid blue;
+        font-size: 16px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: calc(150px / 4);
+        &:hover {
+            background-color: blue;
+            color: #fff;
+        }
+    }
+
+    .GrLinkBottom {
+        transform: translateY(1px);       
+    }
+}
+
+@media screen and (min-width: 400px) {    
+
+    .about-img-container {
+        text-align: center;
+        padding-top: 5vh;       
+    }
+
+    .about-desc {
+        padding-top: 5vh; 
+    }
+
+    .btn-res-container {    
+        padding-top: 5vh;
+    }
+}
+
+@media screen and (min-width: 800px) {    
+
+    .about-container {     
+        padding-top: 10vh;
+    }
+
+    .about-desc {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;          
+        width: 450px;      
+        p {        
+            line-height: 1.5;
+        }
+    }
+
+    .btn-res-container {    
+        padding-top: 7.5vh;
+    }
+    
+}
