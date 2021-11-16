@@ -8,7 +8,7 @@ const Home = ({aboutMe}) => {
         <div className="home-container">
         <div className="greetings">
         <h2>
-        Hi, my name is <br/> <span className="name">Greg</span> <br/>I am a Web developer.
+        Hi, my name is <br className="name-space"/> <span className="name">Greg</span> <br/>I am a Web developer.
         </h2>        
         </div>
         <div className="dev-container">

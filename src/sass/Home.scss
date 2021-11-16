@@ -79,6 +79,7 @@
 }
 
 @media screen and (min-width: 800px) {
+
     .home-container { 
         display: grid; 
         grid-template-columns: 1fr 1fr;
@@ -109,6 +110,12 @@
         grid-row: 2 / 5;
     }
     
+}
+
+@media screen and (min-width: 920px) {
+    .name-space {
+        display: none;
+    }    
 }
     
 
