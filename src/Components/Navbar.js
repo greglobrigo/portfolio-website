@@ -17,11 +17,13 @@ const Navbar = ({aboutMe, projects, contacts}) => {
   }
 
   const handleClickOutside = (e) => {
+       if (showNav != null) {
          if (!burger.current.contains(e.target)) {     
           if (!navLink.current.contains(e.target)) {      
       setShowNav('close');      
       }   
     }
+   }
   }
 
   useEffect(() => {
